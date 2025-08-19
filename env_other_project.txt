@@ -1,0 +1,11 @@
+# Add these to your other Laravel project's .env file
+
+# Appointment API Configuration
+APPOINTMENT_API_URL=http://your-api-server.com/api
+APPOINTMENT_API_TIMEOUT=30
+APPOINTMENT_API_RETRY_ATTEMPTS=3
+
+# Example URLs:
+# If your API is on localhost: APPOINTMENT_API_URL=http://localhost/bansalimmigration.com.au/api
+# If your API is on a different server: APPOINTMENT_API_URL=http://api.yourdomain.com/api
+# If your API is on a different port: APPOINTMENT_API_URL=http://localhost:8080/api 
