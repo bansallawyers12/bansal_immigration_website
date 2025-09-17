@@ -136,7 +136,7 @@ Route::get('/invoice/download/{id}', 'InvoiceController@customer_invoice_downloa
 Route::get('/invoice/print/{id}', 'InvoiceController@customer_invoice_print')->name('invoice.customer_invoice_print');
 Route::get('/profile', 'HomeController@myprofile')->name('profile');
 /*---------------Agent Route-------------------*/
-include_once 'agent.php';
+// Agent routes removed
 /*********************Admin Panel Start ***********************/
 Route::prefix('admin')->group(function() {
      //Login and Logout
@@ -202,18 +202,6 @@ Route::get('/sms/responses', 'SmsController@getResponses')->name('sms.responses'
 
 
 
-//Email verfiy link in send email
-//Route::post('email-verify', 'HomeController@emailVerify')->name('emailVerify');
-Route::get('email-verify-token/{token}', 'HomeController@emailVerifyToken')->name('emailVerifyToken');
-//Thank you page after email verification
-Route::get('thankyou', 'HomeController@thankyou')->name('thankyou');
-
-//Client edit form link in send email
-Route::get('/verify-dob/{encoded_id}', 'HomeController@showDobForm');
-Route::post('/verify-dob', 'HomeController@verifyDob');
-//Route::get('/editclient/{id}', 'HomeController@editclient')->name('editclient');
-Route::get('/editclient/{encoded_id}', 'HomeController@editClient')->middleware('checkDobSession');
-Route::post('/editclient', 'HomeController@editclient')->name('editclient');
 
 //PR point calculator
 Route::get('/pr-calculator', 'AustralianPRCalculatorController@index');

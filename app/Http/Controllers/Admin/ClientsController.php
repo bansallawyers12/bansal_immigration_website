@@ -4347,24 +4347,15 @@ class ClientsController extends Controller
     }
     
     
-    //address_auto_populate
+    //address_auto_populate - Geocoder service removed
     public function address_auto_populate(Request $request){
         $address = $request->address;
         if( isset($address) && $address != ""){
-            $result = app('geocoder')->geocode($address)->get(); //dd($result[0]);
-            $postalCode = $result[0]->getPostalCode();
-            $locality = $result[0]->getLocality();
-            if( !empty($result) ){
-                $response['status'] 	= 	1;
-                $response['postal_code'] = 	$postalCode;
-                $response['locality'] 	= 	$locality;
-                $response['message']	=	"address is success.";
-            } else {
-                $response['status'] 	= 	0;
-                $response['postal_code'] = 	"";
-                $response['locality']    = 	"";
-                $response['message']	=	"address is wrong.";
-            }
+            // Geocoder functionality has been removed
+            $response['status'] 	= 	0;
+            $response['postal_code'] = 	"";
+            $response['locality']    = 	"";
+            $response['message']	=	"Geocoder service is no longer available.";
             echo json_encode($response);
         }
     }
@@ -4590,7 +4581,7 @@ class ClientsController extends Controller
                 $explodeFileName = explode('.', $fileName);
                 $name = time() . $file->getClientOriginalName();
                 $filePath = $client_unique_id.'/'.$doctype.'/'. $name;
-                Storage::disk('s3')->put($filePath, file_get_contents($file));
+                Storage::disk('local')->put($filePath, file_get_contents($file));
                 $exploadename = explode('.', $name);
 
                 $obj = new \App\Document;
@@ -4748,7 +4739,7 @@ class ClientsController extends Controller
                     $explodeFileName = explode('.', $fileName);
                     $name = time() . $file->getClientOriginalName();
                     $filePath = $client_unique_id.'/'.$doctype.'/'. $name;
-                    Storage::disk('s3')->put($filePath, file_get_contents($file));
+                    Storage::disk('local')->put($filePath, file_get_contents($file));
                     $exploadename = explode('.', $name);
 
                     $obj = new \App\Document;
@@ -5515,7 +5506,8 @@ class ClientsController extends Controller
             $explodeFileName = explode('.', $fileName);
             $name = time() . $files->getClientOriginalName();
             $filePath = $client_unique_id.'/'.$doctype.'/'. $name;
-            Storage::disk('s3')->put($filePath, file_get_contents($files));
+            // Changed from S3 to local storage
+            Storage::disk('local')->put($filePath, file_get_contents($files));
             $exploadename = explode('.', $name);
 
             $req_file_id = $request->fileid;
@@ -5524,8 +5516,8 @@ class ClientsController extends Controller
             $obj->filetype = $exploadename[1];
             $obj->user_id = Auth::user()->id;
             //$obj->myfile = $name;
-            // Get the full URL of the uploaded file
-            $fileUrl = Storage::disk('s3')->url($filePath);
+            // Get the full URL of the uploaded file - using local storage
+            $fileUrl = Storage::disk('local')->url($filePath);
             $obj->myfile = $fileUrl;
             $obj->myfile_key = $name;
 
@@ -5859,9 +5851,9 @@ class ClientsController extends Controller
                     $filePathArr = explode('/',$filePath);//dd($filePathArr);
                     if(!empty($filePathArr)){
                         $fileExistPath = $filePathArr[0]."/".$filePathArr[1]."/".$data->myfile_key;
-                        if (Storage::disk('s3')->exists($fileExistPath)) {
+                        if (Storage::disk('local')->exists($fileExistPath)) {
                             // To delete the uploaded file, use the delete method
-                            Storage::disk('s3')->delete($fileExistPath);
+                            Storage::disk('local')->delete($fileExistPath);
                         }
                     }
                 }

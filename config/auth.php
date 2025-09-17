@@ -21,10 +21,6 @@ return [
         'driver' => 'eloquent',
         'model' => App\Admin::class,
     ],
-    'agents' => [
-        'driver' => 'eloquent',
-        'model' => App\Agent::class,
-    ],
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -60,10 +56,6 @@ return [
             'driver' => 'session',
             'provider' => 'providers',
         ],
-        'agents' => [
-            'driver' => 'session',
-            'provider' => 'agents',
-        ],
     ],
 
     /*
@@ -95,10 +87,6 @@ return [
 		'providers' => [
             'driver' => 'eloquent',
             'model' => App\Provider::class,
-        ],
-        'agents' => [
-            'driver' => 'eloquent',
-            'model' => App\Agent::class,
         ]
     ],
 
@@ -132,11 +120,6 @@ return [
             'provider' => 'providers',
             'table' => 'password_resets',
             'expire' => 60,
-        ],
-        'agents' => [
-            'provider' => 'agents',
-            'table' => 'password_resets',
-            'expire' => 15,
         ],
     ],
 	

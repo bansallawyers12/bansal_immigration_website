@@ -216,7 +216,6 @@ return [
 		'Excel' =>  Maatwebsite\Excel\Facades\Excel::class,
 		'Settings' => App\Helpers\Settings::class,
         'Helper' => App\Helpers\Helper::class,
-         // 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
     'debug_blacklist' => [
