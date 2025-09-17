@@ -31,13 +31,5 @@ class Product extends Authenticatable
         'password', 'remember_token',
     ];	
 	
-	public function branchdetail()
-    {
-        return $this->belongsTo('App\PartnerBranch','branches','id');
-    }
-	
-	public function partnerdetail()
-    {
-        return $this->belongsTo('App\Partner','partner','id');
-    }
+	// Partner/branch relationships removed
 }

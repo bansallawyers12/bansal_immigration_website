@@ -244,12 +244,8 @@ class ClientsController extends Controller
 			if(isset($requestData['naati_py']) && !empty($requestData['naati_py'])){
 			$obj->naati_py	=	implode(',',@$requestData['naati_py']);
 			}
-			if(@$requestData['source'] == 'Sub Agent' ){
-				$obj->agent_id	=	@$requestData['subagent'];
-			}
-			else{
-				$obj->agent_id	=	'';
-			}
+			// Agent functionality removed
+			$obj->agent_id = '';
 			$obj->role	=	7;
 
 			/* Profile Image Upload Function Start */
@@ -417,12 +413,8 @@ class ClientsController extends Controller
 			}else{
 			   	$obj->naati_py	=	'';
 			}
-			if(@$requestData['source'] == 'Sub Agent' ){
-				$obj->agent_id	=	@$requestData['subagent'];
-			}
-			else{
-				$obj->agent_id	=	'';
-			}
+			// Agent functionality removed
+			$obj->agent_id = '';
 
 			/* Profile Image Upload Function Start */
 			if($request->hasfile('profile_img'))

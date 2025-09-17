@@ -18,7 +18,7 @@
 							<div class="card-header">
 								<h4>Create Leads</h4>
 								<div class="card-header-action">
-									<a href="{{route('admin.leads.index')}}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</a>
+									<a href="{{route('admin.dashboard')}}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</a>
 								</div>
 							</div>
 						</div>

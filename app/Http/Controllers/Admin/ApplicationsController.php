@@ -15,7 +15,6 @@ use App\ApplicationFeeOption;
    use PDF; 
 use Auth;
 use Config;
-use App\Partner;
 
 class ApplicationsController extends Controller
 {
@@ -527,131 +526,8 @@ class ApplicationsController extends Controller
 		echo json_encode($response);
 	}
 	
-	public function spagent_application(Request $request){
-		$requestData = $request->all();
-		$flag = true;
-		/* if(Application::where('super_agent',$request->super_agent)->exists()){
-			$flag = false;
-			$response['message']	=	'Agent is already exists';
-		}
-		if(Application::where('sub_agent',$request->super_agent)->exists()){
-			$flag = false;
-			$response['message']	=	'Agent is already exists in sub admin';
-		} */
-		if($flag){
-			$user_id = @Auth::user()->id;
-			$obj = Application::find($request->siapp_id);
-			$obj->super_agent = $request->super_agent;
-			$saved = $obj->save();
-			if($saved){
-				$agent = \App\Agent::where('id',$request->super_agent)->first();
-				$response['status'] 	= 	true;
-				$response['message']	=	'Application successfully updated.';
-				$response['data']	=	'<div class="client_info">
-							<div class="cl_logo" style="display: inline-block;width: 30px;height: 30px; border-radius: 50%;background: #6777ef;text-align: center;color: #fff;font-size: 14px; line-height: 30px; vertical-align: top;">'.substr($agent->full_name, 0, 1).'</div>
-							<div class="cl_name" style="display: inline-block;margin-left: 5px;width: calc(100% - 60px);">
-								<span class="name">'.$agent->full_name.'</span>
-								<span class="ui label zippyLabel alignMiddle yellow">
-							  '.$agent->struture.'
-							</span>
-							</div>
-							<div class="cl_del" style="display: inline-block;">
-								<a href=""><i class="fa fa-times"></i></a>
-							</div>
-						</div>';
-			}else{
-				$response['status'] 	= 	false;
-				$response['message']	=	'Please try again';
-			}
-		}else{
-			$response['status'] 	= 	false;
-		}
-		
-		echo json_encode($response);
-	}
 	
-	public function sbagent_application(Request $request){
-		$requestData = $request->all();
-		$flag = true;
-		/* if(Application::where('super_agent',$request->sub_agent)->exists()){
-			$flag = false;
-			$response['message']	=	'Agent is already exists in super admin';
-		}
-		if(Application::where('sub_agent',$request->sub_agent)->exists()){
-			$flag = false;
-			$response['message']	=	'Agent is already exists';
-		} */
-		if($flag){
-			$user_id = @Auth::user()->id;
-			$obj = Application::find($request->sbapp_id);
-			$obj->sub_agent = $request->sub_agent;
-			$saved = $obj->save();
-			if($saved){
-				$agent = \App\Agent::where('id',$request->sub_agent)->first();
-				$response['status'] 	= 	true;
-				$response['message']	=	'Application successfully updated.';
-				$response['data']	=	'<div class="client_info">
-							<div class="cl_logo" style="display: inline-block;width: 30px;height: 30px; border-radius: 50%;background: #6777ef;text-align: center;color: #fff;font-size: 14px; line-height: 30px; vertical-align: top;">'.substr($agent->full_name, 0, 1).'</div>
-							<div class="cl_name" style="display: inline-block;margin-left: 5px;width: calc(100% - 60px);">
-								<span class="name">'.$agent->full_name.'</span>
-								<span class="ui label zippyLabel alignMiddle yellow">
-							  '.$agent->struture.'
-							</span>
-							</div>
-							<div class="cl_del" style="display: inline-block;">
-								<a href=""><i class="fa fa-times"></i></a>
-							</div>
-						</div>';
-			}else{
-				$response['status'] 	= 	false;
-				$response['message']	=	'Please try again';
-			}
-		}else{
-			$response['status'] 	= 	false;
-		}
-		
-		echo json_encode($response);
-	}
 	
-	public function superagent(Request $request){
-		$requestData = $request->all();
-		
-			$user_id = @Auth::user()->id;
-			$obj = Application::find($request->note_id);
-			$obj->super_agent = '';
-			$saved = $obj->save();
-			if($saved){
-
-				$response['status'] 	= 	true;
-				$response['message']	=	'Application successfully updated.';
-				
-			}else{
-				$response['status'] 	= 	false;
-				$response['message']	=	'Please try again';
-			}
-		
-		echo json_encode($response);
-	}
-	
-	public function subagent(Request $request){
-		$requestData = $request->all();
-		
-			$user_id = @Auth::user()->id;
-			$obj = Application::find($request->note_id);
-			$obj->sub_agent = '';
-			$saved = $obj->save();
-			if($saved){
-
-				$response['status'] 	= 	true;
-				$response['message']	=	'Application successfully updated.';
-				
-			}else{
-				$response['status'] 	= 	false;
-				$response['message']	=	'Please try again';
-			}
-		
-		echo json_encode($response);
-	}
 	
 	public function application_ownership(Request $request){
 		$requestData = $request->all();

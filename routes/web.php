@@ -183,15 +183,17 @@ Route::prefix('admin')->group(function() {
 
         Route::post('/update_action', 'Admin\AdminController@updateAction');
 
-        // Contact Management Routes
-        Route::get('/contact-management', 'Admin\ContactManagementController@index')->name('admin.contact-management.index');
-        Route::get('/contact-management/dashboard', 'Admin\ContactManagementController@dashboard')->name('admin.contact-management.dashboard');
-        Route::get('/contact-management/{id}', 'Admin\ContactManagementController@show')->name('admin.contact-management.show');
-        Route::put('/contact-management/{id}/status', 'Admin\ContactManagementController@updateStatus')->name('admin.contact-management.update-status');
-        Route::post('/contact-management/{id}/forward', 'Admin\ContactManagementController@forward')->name('admin.contact-management.forward');
-        Route::delete('/contact-management/{id}', 'Admin\ContactManagementController@destroy')->name('admin.contact-management.destroy');
-        Route::post('/contact-management/bulk-action', 'Admin\ContactManagementController@bulkAction')->name('admin.contact-management.bulk-action');
-        Route::get('/contact-management/export', 'Admin\ContactManagementController@export')->name('admin.contact-management.export');
+        // Contact Management Routes (Admin only)
+        Route::group(['middleware' => 'auth:admin'], function() {
+            Route::get('/contact-management', 'Admin\ContactManagementController@index')->name('admin.contact-management.index');
+            Route::get('/contact-management/dashboard', 'Admin\ContactManagementController@dashboard')->name('admin.contact-management.dashboard');
+            Route::get('/contact-management/{id}', 'Admin\ContactManagementController@show')->name('admin.contact-management.show');
+            Route::put('/contact-management/{id}/status', 'Admin\ContactManagementController@updateStatus')->name('admin.contact-management.update-status');
+            Route::post('/contact-management/{id}/forward', 'Admin\ContactManagementController@forward')->name('admin.contact-management.forward');
+            Route::delete('/contact-management/{id}', 'Admin\ContactManagementController@destroy')->name('admin.contact-management.destroy');
+            Route::post('/contact-management/bulk-action', 'Admin\ContactManagementController@bulkAction')->name('admin.contact-management.bulk-action');
+            Route::get('/contact-management/export', 'Admin\ContactManagementController@export')->name('admin.contact-management.export');
+        });
 });
 
 //Twilio api

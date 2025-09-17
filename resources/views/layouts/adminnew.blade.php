@@ -167,7 +167,7 @@
 					<span aria-hidden="true">&times;</span>
 				  </button>
 				</div>
-				<form action="{{route('admin.leads.index')}}" method="get">
+				<form action="{{route('admin.dashboard')}}" method="get">
 				<div class="modal-body"> 
 					
 						<div class="row">
@@ -242,7 +242,7 @@
 					
 				</div>
 				<div class="modal-footer justify-content-between">
-				  <a href="{{route('admin.leads.index')}}" class="btn btn-default" >Reset</a>
+				  <a href="{{route('admin.dashboard')}}" class="btn btn-default" >Reset</a>
 				  <button type="submit" id="" class="btn btn-primary">Search</button>
 				</div>
 				</form>	
@@ -362,12 +362,12 @@
 		
 		<script type="text/javascript">
 			var site_url = "<?php echo URL::to('/'); ?>"; 
-			var media_url = "<?php echo route('admin.media.store'); ?>";
-			var media_index_url = "<?php echo route('admin.media.index'); ?>";
-			var media_remove_url = "<?php echo route('admin.media.delete'); ?>";
+			var media_url = "<?php echo route('admin.dashboard'); ?>";
+			var media_index_url = "<?php echo route('admin.dashboard'); ?>";
+			var media_remove_url = "<?php echo route('admin.dashboard'); ?>";
 			var media_image_url = "<?php echo URL::to('/public/img/media_gallery'); ?>";
 			var followuplist = "<?php echo URL::to('/'); ?>";
-			var followupstore = "<?php echo URL::to('/admin/followup/store'); ?>";
+			var followupstore = "<?php echo route('admin.dashboard'); ?>";
 		</script>
 		<!--<script async src="https://app.appzi.io/bootstrap/bundle.js?token=unZ6A"></script><div id="zbwid-3c79022e"></div>-->
 		

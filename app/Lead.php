@@ -26,10 +26,6 @@ class Lead extends Authenticatable
         return $this->belongsTo('App\User','user_id','id');
     }
 	
-	public function agentdetail()
-    {
-        return $this->belongsTo('App\User','agent_id','id');
-    }
 	
 	public function staffuser()
     {
