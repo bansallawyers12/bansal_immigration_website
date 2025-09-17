@@ -60,4 +60,9 @@ return [
         'api_key' => env('CELLCAST_API_KEY'),
     ],
 
+    'recaptcha' => [
+        'secret' => env('RECAPTCHA_SECRET'),
+        'site_key' => env('RECAPTCHA_SITE_KEY'),
+    ],
+
 ];

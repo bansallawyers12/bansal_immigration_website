@@ -18,10 +18,19 @@ class Contact extends Authenticatable
 	
 	 
 	protected $fillable = [
-        'id', 'srname', 'first_name', 'middle_name', 'last_name', 'company_name', 'contact_display_name', 'contact_email', 'contact_phone', 'work_phone', 'website', 'designation', 'department', 'skype_name', 'facebook_name', 'twitter_name', 'linkedin_name', 'instagram_name', 'youtube_name', 'country', 'address', 'city', 'zipcode', 'phone', 'created_at', 'updated_at'
+        'id', 'name', 'srname', 'first_name', 'middle_name', 'last_name', 'company_name', 'contact_display_name', 'contact_email', 'contact_phone', 'work_phone', 'website', 'designation', 'department', 'skype_name', 'facebook_name', 'twitter_name', 'linkedin_name', 'instagram_name', 'youtube_name', 'country', 'address', 'city', 'zipcode', 'phone', 'subject', 'message', 'status', 'forwarded_to', 'forwarded_at', 'form_source', 'form_variant', 'ip_address', 'created_at', 'updated_at'
     ]; 
   
-	public $sortable = ['id', 'created_at', 'updated_at'];
+	public $sortable = ['id', 'name', 'contact_email', 'subject', 'status', 'created_at', 'updated_at'];
+
+    /**
+     * Accessor for email attribute to map to contact_email
+     * This provides compatibility with the unified form system
+     */
+    public function getEmailAttribute()
+    {
+        return $this->contact_email;
+    }
  
 	 public function currencydata() 
     {

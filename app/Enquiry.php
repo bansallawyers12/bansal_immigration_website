@@ -19,7 +19,7 @@ class Enquiry extends Authenticatable
      */
 	 
 	protected $fillable = [
-        'id', 'first_name', 'last_name', 'email', 'phone', 'country', 'city', 'address', 'message', 'created_at', 'updated_at'
+        'id', 'first_name', 'last_name', 'email', 'phone', 'country', 'city', 'address', 'subject', 'message', 'ip_address', 'created_at', 'updated_at'
     ];
 
     /** 
