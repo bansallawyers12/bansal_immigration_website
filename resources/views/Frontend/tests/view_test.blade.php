@@ -195,7 +195,7 @@
 														</div>
 														<div class="col-md-8 col-sm-12 float-right">	
 															<a href="{{URL::to('/public/img/test_pdfs/'.@$fetchedDataTest->test_pdf)}}" target="_blank">
-																<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
+																<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
 															</a>
 														</div>
 													</div>
@@ -207,7 +207,7 @@
 														</div>
 														<div class="col-md-8 col-sm-12 float-right">	
 															<a href="{{URL::to('/public/img/test_submitted_copies/'.@$scheduleData->test_submitted_copy)}}" target="_blank">
-																<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
+																<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
 															</a>
 														</div>
 													</div>
@@ -219,7 +219,7 @@
 														</div>
 														<div class="col-md-8 col-sm-12 float-right">	
 															<a href="{{URL::to('/public/img/test_suggestion_pdfs/'.@$fetchedDataTest->test_suggestion_pdf)}}" target="_blank">
-																<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
+																<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
 															</a>
 														</div>
 													</div>
@@ -239,7 +239,7 @@
 																</div>
 																<div class="col-md-8 col-sm-12 float-right">	
 																	<a href="{{URL::to('/public/img/test_pdfs/'.@$fetchedDataTest->test_pdf)}}" target="_blank">
-																		<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
+																		<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
 																	</a>
 																</div>
 															</div>
@@ -327,7 +327,7 @@
 												</div>
 												<div class="col-md-8 col-sm-12 float-right">	
 													<a href="{{URL::to('/public/img/test_reviewed_copies/'.@$scheduleData->test_reviewed_copy)}}" target="_blank">
-														<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
+														<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style=	"width:10%;"/>
 													</a>
 												</div>
 											</div>

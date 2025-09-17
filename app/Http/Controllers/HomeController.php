@@ -56,21 +56,6 @@ class HomeController extends Controller
         return view('coming_soon');
     }
 	
-	public function sicaptcha(Request $request)
-    {
-		 $code=$request->code;
-		
-		$im = imagecreatetruecolor(50, 24);
-		$bg = imagecolorallocate($im, 37, 37, 37); //background color blue
-		$fg = imagecolorallocate($im, 255, 241, 70);//text color white
-		imagefill($im, 0, 0, $bg);
-		imagestring($im, 5, 5, 5,  $code, $fg);
-		header("Cache-Control: no-cache, must-revalidate");
-		header('Content-type: image/png');
-		imagepng($im);
-		imagedestroy($im);
-	
-    }
 	
 		public static function hextorgb ($hexstring){ 
 			$integar = hexdec($hexstring); 
@@ -122,21 +107,7 @@ class HomeController extends Controller
 		$whychoosequeryData 	= $whychoosequery->count();	//for all data
 		$whychoosequerylists		=  $whychoosequery->orderby('id','ASC')->paginate(6);	
 		
-		$vals = array(
-				'img_path' => public_path().'/captcha/',
-				'img_url' => asset('public/captcha'),
-				'expiration' => 7200,
-				'word_lenght' => 6,
-				'font_size' => 15,
-				'img_width'	=> '110', 
-				'img_height' => '40',
-				'colors'	=> array('background' => array(255,175,2),'border' => array(255,175,2),	'text' => array(255,255,255),	'grid' => array(255,255,255))
-			);
-			$cap = $this->create_captcha($vals); 
-			$captcha = $cap['image'];
-			session()->put('captchaWord', $cap['word']);
-			
-	   return view('index', compact(['sliderlists', 'sliderData', 'bloglists', 'blogData', 'servicelists', 'serviceData', 'testimoniallists', 'whychoosequeryData', 'whychoosequerylists', 'testimonialData', 'captcha']));
+	   return view('index', compact(['sliderlists', 'sliderData', 'bloglists', 'blogData', 'servicelists', 'serviceData', 'testimoniallists', 'whychoosequeryData', 'whychoosequerylists', 'testimonialData']));
     }
 	
 	public function myprofile(Request $request)
@@ -145,41 +116,9 @@ class HomeController extends Controller
     }
 	public function contactus(Request $request)
     {
-		// dd($request);
-		$vals = array(
-          'img_path' => public_path().'/captcha/',
-          'img_url' => asset('public/captcha'),
-          'expiration' => 7200,
-          'word_lenght' => 6,
-          'font_size' => 15,
-          'img_width'	=> '110', 
-          'img_height' => '40',
-          'colors'	=> array('background' => array(255,175,2),'border' => array(255,175,2),	'text' => array(255,255,255),	'grid' => array(255,255,255))
-        );
-      $cap = $this->create_captcha($vals); //dd($cap);
-      $captcha = $cap['image']; 
-      session()->put('captchaWord', $cap['word']);
-
-      return view('contact', compact(['captcha']));		
+		return view('contact');		
     }
 	
-	public function refresh_captcha() {
-		$vals = array(
-			'img_path' => public_path().'/captcha/',
-			'img_url' => asset('public/captcha'),
-			'expiration' => 7200,
-			'word_lenght' => 6,
-			'font_size' => 15,
-			'img_width'	=> '110',
-			'img_height' => '40',
-			'colors'	=> array('background' => array(255,175,2),'border' => array(255,175,2),	'text' => array(255,255,255),	'grid' => array(255,255,255))
-		);
- 
-		$cap = $this->create_captcha($vals);
-		$captcha = $cap['image'];
-		session()->put('captchaWord', $cap['word']);
-		echo $cap['image'];
-	}
   
    
     /*public function contact(Request $request){ 
@@ -269,15 +208,6 @@ class HomeController extends Controller
             'phone' => 'required|string|max:20|regex:/^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.0-9]*$/',
             'subject' => 'required|string|max:255',
             'message' => 'required|string|max:2000',
-            'captcha' => [
-                  'required',
-                  'string',
-                  function ($attribute, $value, $fail) {
-                      if (strtolower($value) !== strtolower(session('captchaWord'))) {
-                          $fail('The verification code is incorrect.');
-                      }
-                  },
-              ],
             ], [
                 'email.email' => 'Please enter a valid email address.'
             ]);
@@ -345,8 +275,6 @@ class HomeController extends Controller
 		
         \Mail::to($request->email)->send(new \App\Mail\ContactUsCustomerMail($details_customer));*/
       
-      	// Clear captcha session
-        session()->forget('captchaWord');
         return back()->with('success', 'Thanks for sharing your interest. our team will respond to you with in 24 hours.');
 	}
   

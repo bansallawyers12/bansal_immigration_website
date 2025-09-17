@@ -22,7 +22,6 @@ return [
 	'test_submitted_copies' => public_path().'/img/test_submitted_copies',
 	'test_reviewed_copies' => public_path().'/img/test_reviewed_copies',
 	'profile_imgs' => public_path().'/img/profile_imgs',
-	'invoice' => public_path().'/img/invoice', 
 	'destination_img' => public_path().'/img/destination_img',
 	'topinclusion_img' => public_path().'/img/topinclusion_img',
 	'media_gallery' => public_path().'/img/media_gallery',

@@ -2,7 +2,7 @@
 @section('title', 'Client Detail')
 
 @section('content')
-<link rel="stylesheet" href="{{URL::asset('public/css/bootstrap-datepicker.min.css')}}">
+<link rel="stylesheet" href="{{URL::asset('css/bootstrap-datepicker.min.css')}}">
 <style>
 .popover {max-width:700px;}
 .ag-space-between {justify-content: space-between;}
@@ -3405,7 +3405,7 @@ use App\Http\Controllers\Controller;
 @endsection
 @section('scripts')
 <script src="{{URL::to('/')}}/public/js/popover.js"></script>
-<script src="{{URL::asset('public/js/bootstrap-datepicker.js')}}"></script>
+<script src="{{URL::asset('js/bootstrap-datepicker.js')}}"></script>
 <script>
 jQuery(document).ready(function($){
     $('#edu_service_start_date').datepicker({

@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="col-md-12 col-sm-6 text-center">
 			<div class="form-group">
-				<img class="select_test_series" src="{!! asset('public/img/Frontend/img/select.png') !!}" width="5%">
+				<img class="select_test_series" src="{!! asset('img/Frontend/img/select.png') !!}" width="5%">
 				<label>SELECT COURSE</label>
 			</div>
 		</div>
@@ -174,7 +174,7 @@
 						</div>
 						<div class="col-md-4 col-sm-6 text-center">
 							<a href="{{URL::to('/public/img/plans/'.@$courseDetails->plans)}}" target="_blank">
-								<img src="{{ asset('public/img/pdf.ico') }}" class="pdf-icon" style="width:25%;"/>
+								<img src="{{ asset('img/pdf.ico') }}" class="pdf-icon" style="width:25%;"/>
 							</a>
 							<p class="pdf-name">
 								@if(@$courseDetails->id == 1)

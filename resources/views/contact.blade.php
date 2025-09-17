@@ -53,10 +53,10 @@
     <meta name="twitter:card" content="summary_large_image">
 
 
-   <script defer src="{{asset('public/css/Frontend/contactus/js/compliance_index.js')}}" type="text/javascript" data-gtm-id="GTM-N5LT88" nonce="o+Km7Rhybrih9UxrsvYgaA=="></script>
+   <script defer src="{{asset('css/Frontend/contactus/js/compliance_index.js')}}" type="text/javascript" data-gtm-id="GTM-N5LT88" nonce="o+Km7Rhybrih9UxrsvYgaA=="></script>
 
-   <!--<link href="{{asset('public/css/Frontend/contactus/css/hsg-icons.css')}}" rel="stylesheet">-->
-   <link href="{{asset('public/css/Frontend/contactus/css/styleguide_style.css')}}" rel="stylesheet">
+   <!--<link href="{{asset('css/Frontend/contactus/css/hsg-icons.css')}}" rel="stylesheet">-->
+   <link href="{{asset('css/Frontend/contactus/css/styleguide_style.css')}}" rel="stylesheet">
 
 
     <meta property="og:image" content="<?php echo URL::to('/'); ?>/img/bansal-immigration-icon.jpg" />
@@ -69,28 +69,28 @@
     :root,.-light,.-white,.-dark{--cl-anchor-text-decoration: underline;--cl-anchor-color-dark: #5fa3d4;--cl-anchor-hover-color-dark: #88bde3}:root,[data-cl-theme=light],[data-background=white],[data-background=off-white],.-white,.-light{--cl-color-background-01: #ffffff;--cl-color-background-02: #f6f9fc;--cl-color-background-03: #fef4ea;--cl-color-background-footer-01: #2e475d;--cl-color-border-01: #192733;--cl-color-border-02: #7691ad;--cl-color-border-03: #dbe4ed;--cl-color-border-brand-01: #ff5c35;--cl-color-border-highlight-01: #0068b1;--cl-color-container-01: #ffffff;--cl-color-container-02: #f6f9fc;--cl-color-container-03: #eaf0f6;--cl-color-container-inverse-01: #192733;--cl-color-disabled-01: #99afc4;--cl-color-disabled-02: #eaf0f6;--cl-color-disabled-03: #dbe4ed;--cl-color-divider-01: #dbe4ed;--cl-color-error-01: #cf2738;--cl-color-focus-01: #0068b1;--cl-color-hover-01: #eaf0f6;--cl-color-hover-02: #eaf0f6;--cl-color-hover-03: #b6c7d6;--cl-color-hover-brand-01: #e04826;--cl-color-hover-inverse-01: #2e475d;--cl-color-hover-link-01: #005fa3;--cl-color-hover-link-02: #2e475d;--cl-color-hubspot-brand-01: #ff5c35;--cl-color-icon-01: #213343;--cl-color-icon-02: #516f90;--cl-color-icon-on-color-01: #ffffff;--cl-color-link-01: #0068b1;--cl-color-link-02: #213343;--cl-color-pressed-01: #b6c7d6;--cl-color-pressed-02: #b6c7d6;--cl-color-pressed-03: #99afc4;--cl-color-pressed-brand-01: #b3361d;--cl-color-pressed-inverse-01: #3e5974;--cl-color-pressed-link-01: #005896;--cl-color-pressed-link-02: #516f90;--cl-color-success-01: #1f7d3d;--cl-color-text-01: #213343;--cl-color-text-02: #2e475d;--cl-color-text-brand-01: #ff5c35;--cl-color-text-on-color-01: #ffffff;--cl-color-text-placeholder-01: #516f90;--cl-anchor-color: var(--cl-color-link-01, #0068b1);--cl-anchor-hover-color: var(--cl-color-hover-link-01, #005fa3);--cl-anchor-pressed-color: var(--cl-color-pressed-link-01, #005896);--cl-text-color: var(--cl-color-text-01, #213343)}[data-cl-theme=dark],[data-background=dark],.-dark{--cl-color-background-01: #192733;--cl-color-background-02: #213343;--cl-color-background-03: #213343;--cl-color-background-footer-01: #2e475d;--cl-color-border-01: #ffffff;--cl-color-border-02: #7691ad;--cl-color-border-03: #3e5974;--cl-color-border-brand-01: #ff5c35;--cl-color-border-highlight-01: #ffffff;--cl-color-container-01: #192733;--cl-color-container-02: #213343;--cl-color-container-03: #2e475d;--cl-color-container-inverse-01: #ffffff;--cl-color-disabled-01: #607d9c;--cl-color-disabled-02: #2e475d;--cl-color-disabled-03: #3e5974;--cl-color-divider-01: #3e5974;--cl-color-error-01: #f7818c;--cl-color-focus-01: #5fa3d4;--cl-color-hover-01: #2e475d;--cl-color-hover-02: #2e475d;--cl-color-hover-03: #3e5974;--cl-color-hover-brand-01: #e04826;--cl-color-hover-inverse-01: #b6c7d6;--cl-color-hover-link-01: #88bde3;--cl-color-hover-link-02: #b6c7d6;--cl-color-hubspot-brand-01: #ff5c35;--cl-color-icon-01: #ffffff;--cl-color-icon-02: #b6c7d6;--cl-color-icon-on-color-01: #192733;--cl-color-link-01: #5fa3d4;--cl-color-link-02: #ffffff;--cl-color-pressed-01: #3e5974;--cl-color-pressed-02: #3e5974;--cl-color-pressed-03: #516f90;--cl-color-pressed-brand-01: #b3361d;--cl-color-pressed-inverse-01: #99afc4;--cl-color-pressed-link-01: #9ec8e6;--cl-color-pressed-link-02: #99afc4;--cl-color-success-01: #4fb06d;--cl-color-text-01: #ffffff;--cl-color-text-02: #b6c7d6;--cl-color-text-brand-01: #ff5c35;--cl-color-text-on-color-01: #192733;--cl-color-text-placeholder-01: #99afc4;--cl-anchor-color: var(--cl-color-link-01, #5fa3d4);--cl-anchor-hover-color: var(--cl-color-hover-link-01, #88bde3);--cl-anchor-pressed-color: var(--cl-color-pressed-link-01, #9ec8e6);--cl-text-color: var(--cl-color-text-01, #ffffff)}:root,[data-cl-brand=hubspot-2022]{--cl-font-family: "Lexend Deca", sans-serif;--cl-font-family-display: "Queens Medium", serif;--cl-font-size-blockquote: 1.125rem;--cl-font-size-display-01-small: 2.25rem;--cl-font-size-display-01: 3.75rem;--cl-font-size-display-02-small: 2.125rem;--cl-font-size-display-02: 3rem;--cl-font-size-display-03-small: 2rem;--cl-font-size-display-03: 2.5rem;--cl-font-size-h1-small: 2.25rem;--cl-font-size-h1: 3rem;--cl-font-size-h2-small: 1.625rem;--cl-font-size-h2: 2rem;--cl-font-size-h3: 1.5rem;--cl-font-size-h4: 1.375rem;--cl-font-size-h5: 1.125rem;--cl-font-size-h6: 1rem;--cl-font-size-input-label: 0.875rem;--cl-font-size-microcopy: 0.75rem;--cl-font-size-microheading: 0.875rem;--cl-font-size-p-large: 1.125rem;--cl-font-size-p-medium: 1rem;--cl-font-size-p-small: 0.875rem;--cl-font-weight-blockquote: 300;--cl-font-weight-display-01-small: 500;--cl-font-weight-display-01: 500;--cl-font-weight-display-02-small: 500;--cl-font-weight-display-02: 500;--cl-font-weight-display-03-small: 500;--cl-font-weight-display-03: 500;--cl-font-weight-h1-small: 600;--cl-font-weight-h1: 500;--cl-font-weight-h2-small: 600;--cl-font-weight-h2: 600;--cl-font-weight-h3: 500;--cl-font-weight-h4: 500;--cl-font-weight-h5: 600;--cl-font-weight-h6: 500;--cl-font-weight-input-label: 500;--cl-font-weight-microcopy: 500;--cl-font-weight-microheading: 600;--cl-font-weight-p-large: 300;--cl-font-weight-p-medium: 300;--cl-font-weight-p-small: 300;--cl-font-weight-p-link: 500;--cl-line-height-blockquote: 1.78;--cl-line-height-display-01-small: 1.27777778;--cl-line-height-display-01: 1.13333333;--cl-line-height-display-02-small: 1.23529412;--cl-line-height-display-02: 1.20833333;--cl-line-height-display-03-small: 1.25;--cl-line-height-display-03: 1.2;--cl-line-height-h1-small: 1.27777778;--cl-line-height-h1: 1.25;--cl-line-height-h2-small: 1.375;--cl-line-height-h2: 1.375;--cl-line-height-h3: 1.41666667;--cl-line-height-h4: 1.45454545;--cl-line-height-h5: 1.55555556;--cl-line-height-h6: 1.75;--cl-line-height-input-label: 1.57142857;--cl-line-height-microcopy: 1.66666667;--cl-line-height-microheading: 1.57142857;--cl-line-height-p-large: 1.77777778;--cl-line-height-p-medium: 1.75;--cl-line-height-p-small: 1.57142857}
     </style>
 
-	<link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/richTextOverrides.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/module_80990896713_sectionHeader.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/section.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/richTextOverrides.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/module_80990896713_sectionHeader.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/section.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/module_80992206967_googleMapsLocation.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/card.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/button.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/module_80992206926_accordion.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/module_80991154561_multiRow.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/module_80992206967_googleMapsLocation.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/card.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/button.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/module_80992206926_accordion.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/module_80991154561_multiRow.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/textLink.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/module_80991154560_multiColumnContent.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/textLink.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/module_80991154560_multiColumnContent.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/grid.min.css') }}">
-    <link class="hs-async-css" rel="preload" href="{{ asset('public/css/Frontend/contactus/css/footer.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/grid.min.css') }}">
+    <link class="hs-async-css" rel="preload" href="{{ asset('css/Frontend/contactus/css/footer.min.css') }}">
     <noscript>
-        <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/footer.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/footer.min.css') }}">
     </noscript>
 
-    <link class="hs-async-css" rel="preload" href="{{ asset('public/css/Frontend/contactus/css/nav-shared.min.css') }}">
+    <link class="hs-async-css" rel="preload" href="{{ asset('css/Frontend/contactus/css/nav-shared.min.css') }}">
     <noscript>
-        <link rel="stylesheet" href="{{ asset('public/css/Frontend/contactus/css/nav-shared.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/Frontend/contactus/css/nav-shared.min.css') }}">
     </noscript>
 
     <!-- End of hsg-head.html -->
@@ -184,7 +184,7 @@
                         </div>
 
                         <div class="csol-header-image-wrapper">
-                          <img src="{{ asset('public/img/Frontend/contactus_bg.jpeg') }}" alt="_R5A5846" class="csol-header-image -large-image" width="966" height="644" loading="eager" fetchpriority="high" decoding="sync" srcset="{{ asset('public/img/Frontend/contactus_bg.jpeg') }}" sizes="(max-width: 966px) 100vw, 966px">
+                          <img src="{{ asset('img/Frontend/contactus_bg.jpeg') }}" alt="_R5A5846" class="csol-header-image -large-image" width="966" height="644" loading="eager" fetchpriority="high" decoding="sync" srcset="{{ asset('img/Frontend/contactus_bg.jpeg') }}" sizes="(max-width: 966px) 100vw, 966px">
                         </div>
                       </div>
                     </section>
@@ -342,23 +342,6 @@
                                           </div>
                                           <div class="capcha_code" style="margin-bottom:20px;margin-left:10px;">
                                               <label>Verify Code:</label>
-                                              <div class="code_verify">
-                                                  <div class="image ">
-                                                      <?php echo $captcha; ?>
-                                                  </div>
-                                              </div>
-                                              <div class="code_refresh">
-                                                  @if ($errors->has('captcha'))
-                                                      <span class="invalid-feedback" role="alert">
-                                                          <strong>{{ $errors->first('captcha') }}</strong>
-                                                      </span>
-                                                  @endif
-                                                  <input type="text" name="captcha" id="captcha" required class="form-control cap1" placeholder="Enter Code Here" value="" onkeyup="IsChkNumc(this);" onchange="IsChkNumc(this);" type="text" min="6" maxlength="6" autocomplete="off"/>
-                                                  <a class="refresh" href="javascript:;"><i class="fa fa-refresh"></i></a>
-                                                   @error('captcha')
-                                                      <span class="text-red-500 text-sm">{{ $message }}</span>
-                                                  @enderror
-                                              </div>
                                               <div class="clearfix"></div>
                                           </div>
                                       </div>

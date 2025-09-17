@@ -38,18 +38,6 @@ $(function () {
           "orderable": false,
     } ]
 	});
-	$('#invoicetable').DataTable({  
-	  "paging": true,
-	  "lengthChange": false,
-	  "searching": false,
-	  "ordering": true,
-	  "info": true,
-	  "autoWidth": false,
-	  "columnDefs": [ {
-          "targets": 'no-sort',
-          "orderable": false,
-    } ]
-	});
 	$('#holidaypackage_table').DataTable({  
 	  "paging": true,
 	  "lengthChange": false,

@@ -41,12 +41,6 @@
 									</div>
 								</div>
 								
-								<!-- Google Recaptcha -->
-                                <div class="g-recaptcha mt-4" data-sitekey={{ config('services.recaptcha.key') }}></div>
-
-                                @if ($errors->has('g-recaptcha-response'))
-									<div style="color: #dc3545;">Captcha field is required.</div>
-								@endif
 								
 								<div class="form-group">
 									<div class="custom-control custom-checkbox">

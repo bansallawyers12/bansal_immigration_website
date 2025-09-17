@@ -50,7 +50,6 @@ class AdminLoginController extends Controller
         $this->validate($request, [
         'email' => 'required|string',
         'password' => 'required|string',
-        'g-recaptcha-response' => 'required',
         ]);
     }
 	
@@ -75,25 +74,7 @@ class AdminLoginController extends Controller
     }*/
     
     public function authenticated(Request $request, $user)
-    {   
-        $recaptcha_response = $request->input('g-recaptcha-response');
-        if (is_null($recaptcha_response)) {
-            $errors = ['g-recaptcha-response' => 'Please Complete the Recaptcha to proceed'];
-            return redirect()->back()->withErrors($errors);
-        }
-
-        $url = "https://www.google.com/recaptcha/api/siteverify";
-
-        $body = [
-            'secret' => config('services.recaptcha.secret'),
-            'response' => $recaptcha_response,
-            'remoteip' => IpUtils::anonymize($request->ip()) //anonymize the ip to be GDPR compliant. Otherwise just pass the default ip address
-        ];
-
-        $response = Http::get($url, $body); //dd($response);
-        $result = json_decode($response); //dd($result);
-
-        if ($response->successful() && $result->success == true) { 
+    { 
             if(!empty($request->remember)) {
                 \Cookie::queue(\Cookie::make('email', $request->email, 3600));
                 \Cookie::queue(\Cookie::make('password', $request->password, 3600));
@@ -126,10 +107,6 @@ class AdminLoginController extends Controller
             $obj->message = 'Logged in successfully';
             $obj->save();
             return redirect()->intended($this->redirectPath());
-        } else { 
-            $errors = ['g-recaptcha-response' => 'Please Complete the Recaptcha Again to proceed'];
-            return redirect()->back()->withErrors($errors);
-        }
     }
 	
 	 protected function sendFailedLoginResponse(Request $request)

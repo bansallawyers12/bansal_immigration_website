@@ -49,10 +49,6 @@ return [
     ],
 
     //Add these Configurations
-    'recaptcha' => [
-        'key' => env('RECAPTCHA_SITE_KEY'),
-        'secret' => env('RECAPTCHA_SITE_SECRET'),
-    ],
 
     'twilio' => [
        'sid' => env('TWILIO_SID'),

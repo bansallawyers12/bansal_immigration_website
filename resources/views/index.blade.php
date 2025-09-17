@@ -13,7 +13,7 @@
 	<meta property="og:url" content="<?php echo URL::to('/'); ?>">
 	<meta property="og:site_name" content="<?php echo @\App\ThemeOption::where('meta_key','site_name')->first()->meta_value; ?>">
 	<meta property="article:modified_time" content="2023-04-04T21:06:24+00:00">
-	<meta property="og:image" content="{{asset('public/img/bansal-immigration-icon.jpg')}}">
+	<meta property="og:image" content="{{asset('img/bansal-immigration-icon.jpg')}}">
 	<meta property="og:image:width" content="200">
 	<meta property="og:image:height" content="200">
 	<meta property="og:image:type" content="image/jpeg">
@@ -21,7 +21,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="<?php echo @\App\HomeContent::where('meta_key','meta_title')->first()->meta_value; ?>">
 	<meta name="twitter:description" content="<?php echo @\App\HomeContent::where('meta_key','meta_description')->first()->meta_value; ?>">
-	<meta name="twitter:image" content="{{asset('public/img/bansal-immigration-icon.jpg')}}">
+	<meta name="twitter:image" content="{{asset('img/bansal-immigration-icon.jpg')}}">
 	<meta name="twitter:site" content="@Bansalimmi">
 	<meta name="twitter:label1" content="Est. reading time">
 	<meta name="twitter:data1" content="6 minutes">
@@ -63,7 +63,7 @@ if(@$sliderstat == 1){
 <section class="hero-area">
 	<div class="hero-slides1">
 		@foreach (@$sliderlists as $list)
-		<div class="single-hero-slide1" style="background-image:url('{{ asset('public/img/slider/' . @$list->image) }}');background-size: 100% 100%;">
+		<div class="single-hero-slide1" style="background-image:url('{{ asset('img/slider/' . @$list->image) }}');background-size: 100% 100%;">
 
 			<div class="container h-100" style="z-index:2">
 				<div class="row h-100 align-items-center"> 
@@ -99,7 +99,7 @@ if(@$sliderstat == 1){
 		<div class="row align-items-center" style="padding-top:60px;">
 			<div class="col-12 col-md-6">
 				<div class="about-thumbnail mb-100">
-					<img src="{{asset('public/img/Frontend/about.jpg') }}" style="border-radius:20px" alt="About Bansal Immigration - Trusted Australian Immigration Experts" />
+					<img src="{{asset('img/Frontend/about.jpg') }}" style="border-radius:20px" alt="About Bansal Immigration - Trusted Australian Immigration Experts" />
 				</div>
 			</div>
 			<div class="col-12 col-md-6">
@@ -152,7 +152,7 @@ if(@$whychoosestat == 1){
 if(@$servicestat == 1){
  ?>
 <!--================Project Area =================-->
-<section class="services_area" style="padding-top:40px; padding-bottom:30px; background-image:url({{asset('public/img/Frontend/projectback.jpg')}}); background-size: 100% 100%;">
+<section class="services_area" style="padding-top:40px; padding-bottom:30px; background-image:url({{asset('img/Frontend/projectback.jpg')}}); background-size: 100% 100%;">
 	<div class="container">
 		<h2 class="text-center"><span style="color:#fff;Merienda, cursive;font-optical-sizing: auto;font-style: normal;font-weight:500">SERVICES WE OFFER</span></h2>
 		<p class="text-center" style="color:#fff">We provide the following services at  <a style="color:#ffaf02" href="<?php echo URL::to('/'); ?>">Bansal Immigration Consultants</a></p>
@@ -183,7 +183,7 @@ if(@$servicestat == 1){
 <!--==========================
       Testimonials Section
     ============================-->
-<section id="testimonials" class="wow fadeInUp" style="background-image: url({{ asset('public/img/testimonial_img/test.jpg') }}); background-size: 100% 100%;">
+<section id="testimonials" class="wow fadeInUp" style="background-image: url({{ asset('img/testimonial_img/test.jpg') }}); background-size: 100% 100%;">
 	<div class="container">
 		<div class="row row-cols-3">
 			<?php $testmioalstat = @\App\HomeContent::where('meta_key','testimonialstatus')->first()->meta_value;
@@ -197,10 +197,10 @@ if(@$servicestat == 1){
 				<div class="owl-carousel testimonials-carousel">
 					@foreach (@$testimoniallists as $list)
 					<div class="testimonial-item" style="background-color:#FFFFFF">
-						<img src="{{asset('public/img/Frontend/quote-sign-left.png')}}" class="quote-sign-left" alt="Opening quote mark">
+						<img src="{{asset('img/Frontend/quote-sign-left.png')}}" class="quote-sign-left" alt="Opening quote mark">
 						<p>{{@$list->description}}</p>
-						<img src="{{asset('public/img/Frontend/quote-sign-right.png')}}" class="quote-sign-right" alt="Closing quote mark">
-						<img src="{{asset('public/img/testimonial_img')}}/{{@$list->image}}" class="testimonial-img" alt="{{@$list->name}}">
+						<img src="{{asset('img/Frontend/quote-sign-right.png')}}" class="quote-sign-right" alt="Closing quote mark">
+						<img src="{{asset('img/testimonial_img')}}/{{@$list->image}}" class="testimonial-img" alt="{{@$list->name}}">
 						<p><b>{{@$list->name}}</b></p>
 					</div>
 					@endforeach
@@ -221,7 +221,7 @@ if(@$servicestat == 1){
 
 
 <!-- ##### Currency Area Start ##### -->
-<section class="currency-calculator-area section-padding-50 bg-img bg-overlay" style="background-image: url({{ asset('public/img/Frontend/bg-2.jpg') }});">
+<section class="currency-calculator-area section-padding-50 bg-img bg-overlay" style="background-image: url({{ asset('img/Frontend/bg-2.jpg') }});">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -261,21 +261,6 @@ if(@$servicestat == 1){
                         </div>
                         <div class="capcha_code" style="margin-bottom:20px;">
                             <label>Verify Code:</label>
-                            <div class="code_verify">
-                                <div class="image">
-                                    <?php echo $captcha; ?>
-                                </div>
-                            </div>
-                            <div class="code_refresh">
-                                @if ($errors->has('captcha'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('captcha') }}</strong>
-                                    </span>
-                                @endif
-                                <input type="text" name="captcha" id="captcha" required="required" class="form-control cap1" placeholder="Enter Code Here" min="6" maxlength="6" autocomplete="off"/>
-                                <a class="refresh" href="javascript:;"><i class="fa fa-refresh"></i></a>
-                            </div>
-                            <div class="clearfix"></div>
                         </div>
                     </div>
 

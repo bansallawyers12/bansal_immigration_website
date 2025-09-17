@@ -11,7 +11,6 @@ use App\Admin;
 use App\Report;
 use App\Application;
 use App\CheckinLog;
-use App\Invoice;
 use App\Task;
  
 use Auth; 
@@ -50,15 +49,6 @@ class ReportController extends Controller
 		
 		return view('Admin.reports.application', compact(['lists', 'totalData'])); 
 		//return view('Admin.reports.application');
-	}
-	public function invoice(Request $request)  
-	{	
-		$query 		= Invoice::where('id', '!=', ''); 		  
-		$totalData 	= $query->count();	//for all data
-		$lists		= $query->sortable(['id' => 'desc'])->paginate(20);
-		
-		return view('Admin.reports.invoice', compact(['lists', 'totalData'])); 
-		//return view('Admin.reports.invoice');
 	}
 	public function office_visit(Request $request)  
 	{		

@@ -6,7 +6,7 @@
 		<div class="container-fluid">
 			<div class="row"> 
 				<div class="list_image">
-					<img src="{!! asset('public/img/Frontend/img/rajastan_img.jpg') !!}" class="img-fluid" alt=""/>
+					<img src="{!! asset('img/Frontend/img/rajastan_img.jpg') !!}" class="img-fluid" alt=""/>
 					<div class="opacity_banner"></div> 
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 							</div>
 						</div>
 					</div>  
-					<div id="mloader" style="position: fixed;left: 45%;padding: 20px;top: 40%;opacity: 0.5;border: 1px solid rgb(102, 102, 102);z-index: 100;background-color: rgb(255, 255, 255);display: none;"><img src="{!! asset('public/img/loader.gif') !!}" alt="Loading"></div>
+					<div id="mloader" style="position: fixed;left: 45%;padding: 20px;top: 40%;opacity: 0.5;border: 1px solid rgb(102, 102, 102);z-index: 100;background-color: rgb(255, 255, 255);display: none;"><img src="{!! asset('img/loader.gif') !!}" alt="Loading"></div>
 					<div id="ajaxResultContainer">
 						<div class="row">
 							<div class="col-lg-12">

@@ -54,10 +54,6 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-        'invoices' => [
-            'driver' => 'local',
-            'root'   => public_path() . '/invoices',
-        ],
 
     ],
 

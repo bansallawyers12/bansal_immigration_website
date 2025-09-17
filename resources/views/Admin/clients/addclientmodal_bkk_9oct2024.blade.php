@@ -338,7 +338,7 @@
                                         <div class="services_item_title">
                                             <input type="radio" class="services_item" name="radioGroup"  value="{{$bookservices->id}}" >
                                             <div class="services_item_img" style="display:inline-block;margin-left: 10px;">
-                                                <img class="" style="width: 80px;height:80px;" src="{{asset('public/img/service_img')}}/{{$bookservices->image}}">
+                                                <img class="" style="width: 80px;height:80px;" src="{{asset('img/service_img')}}/{{$bookservices->image}}">
                                             </div>
                                             <span class="services_item_title_span">{{$bookservices->title}} <br/>{{$bookservices->duration}} minutes</span>
                                             <span class="services_item_price"> {{$bookservices->price}}</span>

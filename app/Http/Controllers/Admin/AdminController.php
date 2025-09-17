@@ -17,7 +17,6 @@ use App\City;
 use App\Contact;
 use App\TaxRate;
 use PDF;
-use App\InvoicePayment;
 use App\Setting;
 use Auth;
 use Config;

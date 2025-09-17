@@ -1147,50 +1147,6 @@ function customValidate(formName, savetype = '')
 								}
 							}
 						});		
-					}else if(formName == 'ajaxinvoicepaymentform'){
-							var client_id = $('#ajaxinvoicepaymentform input[name="client_id"]').val();
-						var myform = document.getElementById('ajaxinvoicepaymentform');
-						var fd = new FormData(myform);	
-						
-						$.ajax({
-							type:'post',
-							url:$("form[name="+formName+"]").attr('action'),
-							processData: false,
-							contentType: false,
-							data: fd,
-							success: function(response){
-								$('.popuploader').hide(); 
-								var obj = $.parseJSON(response);
-								$('#addpaymentmodal').modal('hide');
-								if(obj.status){
-								$('.custom-error-msg').html('<span class="alert alert-success">'+obj.message+'</span>');
-									 $.ajax({
-										url: site_url+'/admin/get-invoices',
-										type:'GET',
-										data:{clientid:client_id},
-										success: function(responses){
-												 $('.invoicetable').DataTable().destroy();
-													$('.invoicedatalist').html(responses);
-												$('.invoicetable').DataTable({
-													"searching": false,
-													"lengthChange": false,
-												  "columnDefs": [
-													{ "sortable": false, "targets": [0, 2, 3] }
-												  ],
-												  order: [[1, "desc"]] //column indexes is zero based
-
-													
-												}).draw();
-											
-										}
-									}); 
-									
-								}else{
-									$('.custom-error-msg').html('<span class="alert alert-danger">'+obj.message+'</span>');
-									
-								}
-							}
-						});
 					
 					}else if(formName == 'discontinue_application'){
 							var client_id = $('#discontinue_application input[name="client_id"]').val();
@@ -2053,10 +2009,6 @@ $('#add_application').modal('hide');
 					}
 				else
 					{	
-						if(formName == 'invoiceform')
-						{
-							$('input[name="btn"]').val(savetype);
-						}
 						$("form[name="+formName+"]").submit();
 						return true;	
 					} 
@@ -2065,9 +2017,6 @@ $('#add_application').modal('hide');
 	}	
 	
 
-function customInvoiceValidate(formName, savetype)
-	{
-		$("#loader").show(); //all form submit
 		
 		var i = 0;	
 		$(".custom-error").remove(); //remove all errors when submit the button

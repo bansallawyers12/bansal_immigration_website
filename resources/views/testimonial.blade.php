@@ -9,7 +9,7 @@
       Testimonials Section
     ============================-->
 
-<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({!! asset('public/img/Frontend/bg-2.jpg') !!}); padding-top:40px">
+<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({!! asset('img/Frontend/bg-2.jpg') !!}); padding-top:40px">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">

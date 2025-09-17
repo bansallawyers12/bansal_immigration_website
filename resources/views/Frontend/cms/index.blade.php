@@ -30,7 +30,7 @@
   ul { list-style-type: disc !important;}
 </style>
 
-<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({{ asset('public/img/Frontend/bg-2.jpg') }});">
+<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({{ asset('img/Frontend/bg-2.jpg') }});">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -52,7 +52,7 @@
                     <h1>{{@$pagedata->title}}</h1>
 
 					<?php if($pagedata->image != ''){ ?>
-					<img src="{{ asset('public/img/cmspage/') }}/<?php echo $pagedata->image; ?>" alt="" class="page_image" />
+					<img src="{{ asset('img/cmspage/') }}/<?php echo $pagedata->image; ?>" alt="" class="page_image" />
 					<?php } ?>
 
 

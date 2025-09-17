@@ -5,6 +5,6 @@
 	<div class="footer-right">
 	       
 	</div>
-	<div class='thumb audio'><audio id="player" src="{{asset('public/ZURQ2FE-notification.mp3')}}"></audio></div>
+	<div class='thumb audio'><audio id="player" src="{{asset('ZURQ2FE-notification.mp3')}}"></audio></div>
 	<a id="button" title="button"></a>
 </footer>

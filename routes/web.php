@@ -49,8 +49,7 @@ Route::post('/exception', 'ExceptionController@index')->name('exception');
 // Route::get('/enquiry', 'HomeController@enquiry')->name('enquiry');
 // Route::post('/enquiry/store', 'HomeController@store')->name('enquiry.store');
 
-// Route::get('sicaptcha', 'HomeController@sicaptcha')->name('sicaptcha');
-// Route::get('invoice/secure/{slug}', 'InvoiceController@invoice')->name('invoice');
+// // Route::get('invoice/secure/{slug}', 'InvoiceController@invoice')->name('invoice');
 // Route::get('/invoice/download/{id}', 'InvoiceController@customer_invoice_download')->name('invoice.customer_invoice_download');
 // Route::get('/invoice/print/{id}', 'InvoiceController@customer_invoice_print')->name('invoice.customer_invoice_print');
 // //singlepackage
@@ -112,7 +111,6 @@ Route::get('/search_result', 'HomeController@search_result')->name('search_resul
 //Route::get('/blogs/{slug}', 'HomeController@blogdetail')->name('blogdetail');
 Route::get('/contact-us', 'HomeController@contactus');
 Route::post('/contact-us', 'HomeController@contact')->name('contact.emailsubmit');
-Route::get('/refresh-captcha', 'HomeController@refresh_captcha');
 
 Route::get('stripe/{appointmentId}', 'HomeController@stripe');
 Route::post('stripe', 'HomeController@stripePost')->name('stripe.post1');
@@ -128,12 +126,8 @@ Route::post('/getdisableddatetime', 'HomeController@getdisableddatetime');
 
 //Route::get('/mission-vision', 'HomeController@missionvision')->name('mission_vision');
 Route::get('page/{slug}', 'HomeController@Page')->name('page.slug');
-Route::get('sicaptcha', 'HomeController@sicaptcha')->name('sicaptcha');
 Route::post('enquiry-contact', 'PackageController@enquiryContact')->name('query.contact');
 Route::get('thanks', 'PackageController@thanks')->name('thanks');
-Route::get('invoice/secure/{slug}', 'InvoiceController@invoice')->name('invoice');
-Route::get('/invoice/download/{id}', 'InvoiceController@customer_invoice_download')->name('invoice.customer_invoice_download');
-Route::get('/invoice/print/{id}', 'InvoiceController@customer_invoice_print')->name('invoice.customer_invoice_print');
 Route::get('/profile', 'HomeController@myprofile')->name('profile');
 /*---------------Agent Route-------------------*/
 // Agent routes removed

@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Admin;
-use App\InvoicePayment;
 use App\IncomeSharing;
 use PDF;
 use Auth;

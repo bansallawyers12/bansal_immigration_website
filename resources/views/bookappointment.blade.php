@@ -11,7 +11,7 @@
 	<meta property="og:site_name" content="Bansal Immigration - Your Future, Our Priority" />
 	<meta property="article:publisher" content="https://www.facebook.com/BANSALImmigration/" />
 	<meta property="article:modified_time" content="2021-08-30T09:05:04+00:00" />
-	<meta property="og:image" content="{{asset('public/img/bansal-immigration-icon.jpg')}}" />
+	<meta property="og:image" content="{{asset('img/bansal-immigration-icon.jpg')}}" />
 	<meta property="og:image:width" content="200" />
 	<meta property="og:image:height" content="200" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -223,7 +223,7 @@ ol > li::marker {
 }
 
 </style>
-<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({{asset('public/img/Frontend/bg-2.jpg')}}); padding-top:40px">
+<section class="custom_breadcrumb bg-img bg-overlay" style="background-image: url({{asset('img/Frontend/bg-2.jpg')}}); padding-top:40px">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -300,7 +300,7 @@ ol > li::marker {
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="tab_logo">
 									<a href="#">
-										<img src="{{asset('public/img/logo_img/bansal-imm-logo-11_vrUFM77pu7.png')}}" alt="Bansal Immigration Consultants" />
+										<img src="{{asset('img/logo_img/bansal-imm-logo-11_vrUFM77pu7.png')}}" alt="Bansal Immigration Consultants" />
 									</a>
 								</li>
 								<li class="nav-item">
@@ -325,7 +325,7 @@ ol > li::marker {
                             <div id="confirm_div" class="col-12 col-md-6 col-lg-6" style="margin-left: 15px;width: 90%;">
 
                                 <div id="loading">
-                                    <img id="loading-image" src="{{asset('public/images/ajax-loader.gif')}}" alt="Loading..." />
+                                    <img id="loading-image" src="{{asset('images/ajax-loader.gif')}}" alt="Loading..." />
                                 </div>
 
                                 <div class="row nature_of_enquiry_row" id="nature_of_enquiry">
@@ -348,7 +348,7 @@ ol > li::marker {
                                                 <div class="services_item_title">
                                                     <input type="radio" class="services_item" name="radioGroup"  value="{{$bookservices->id}}">
                                                     <div class="services_item_img" style="display:inline-block;margin-left: 10px;">
-                                                        <img style="width: 80px;height:80px;" src="{{asset('public/img/service_img')}}/{{$bookservices->image}}" alt="{{$bookservices->title}}">
+                                                        <img style="width: 80px;height:80px;" src="{{asset('img/service_img')}}/{{$bookservices->image}}" alt="{{$bookservices->title}}">
                                                     </div>
                                                     <span class="services_item_title_span">{{$bookservices->title}} <br/>{{$bookservices->duration}} minutes</span>
                                                     <span class="services_item_price"> {{$bookservices->price}}</span>
@@ -586,7 +586,7 @@ ol > li::marker {
             <form role="form" action="{{ route('stripe.post') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
             @csrf
                 <div id="loading_popup">
-                    <img id="loading-image_popup" src="{{asset('public/images/ajax-loader.gif')}}" alt="Loading..." />
+                    <img id="loading-image_popup" src="{{asset('images/ajax-loader.gif')}}" alt="Loading..." />
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="noe_id" id="noe_id_paid" value="">

@@ -66,19 +66,19 @@
 					<ul class="mydropdown-menu dropdown-menu" aria-labelledby="dropdownbtn">  
 						<li>    
 							<a id="WhatsApp" href="" target="_blank">
-								<img src="{!! asset('public/img/whatsapp.png') !!}" class="SocialLinkImage" alt="WhatsApp" title="WhatsApp" style="vertical-align: middle;">WhatsApp</a>
+								<img src="{!! asset('img/whatsapp.png') !!}" class="SocialLinkImage" alt="WhatsApp" title="WhatsApp" style="vertical-align: middle;">WhatsApp</a>
 						</li>
 						<li>  
 							<a id="Facebook" href="" target="_blank">
-								<img src="{!! asset('public/img/facebook.png') !!}" class="SocialLinkImage" alt="Facebook" title="Facebook" style="vertical-align: middle;">Facebook</a>
+								<img src="{!! asset('img/facebook.png') !!}" class="SocialLinkImage" alt="Facebook" title="Facebook" style="vertical-align: middle;">Facebook</a>
 						</li>
 						<li>   
 							<a id="Twitter" href="" target="_blank">
-								<img src="{!! asset('public/img/twitter_opt.png') !!}" class="SocialLinkImage" alt="Twitter" title="Twitter" style="vertical-align: middle;">Twitter</a>
+								<img src="{!! asset('img/twitter_opt.png') !!}" class="SocialLinkImage" alt="Twitter" title="Twitter" style="vertical-align: middle;">Twitter</a>
 						</li>
 						<li>
 							<a id="LinkedIn" href="" target="_blank">
-								<img width="30" height="30" src="{!! asset('public/img/linkedIn_PNG36.png') !!}" class="SocialLinkImage" alt="Twitter" title="Twitter" style="vertical-align: middle;">LinkedIn</a>
+								<img width="30" height="30" src="{!! asset('img/linkedIn_PNG36.png') !!}" class="SocialLinkImage" alt="Twitter" title="Twitter" style="vertical-align: middle;">LinkedIn</a>
 						</li>
 					</ul>
 					<script> 
@@ -254,7 +254,7 @@
 									<div class="col-sm-2 col-xs-3 padding5px">
 										<div class="packagedethotelimg">
 											<div class="zoomicon">
-												<img class="lozad" src="{!! asset('public/img/zoom.png') !!}" alt="zoom" data-loaded="true">
+												<img class="lozad" src="{!! asset('img/zoom.png') !!}" alt="zoom" data-loaded="true">
 											</div>
 											<a href="javascript:;" ng-src="{{@$dest->data->image_hotel_path}}{{$hli->hotel->image}}" class="gallerypopup">
 											<img  alt="" title="{{$hli->hotel->image_alt}}" class="ng-scope" src="{{@$dest->data->image_hotel_path}}{{$hli->hotel->image}}">
@@ -270,7 +270,7 @@
 													</div>
 													<div class="starmargin ng-binding" ng-bind-html="hotel.Categoryimg | rawHtml">
 													<?php for($ik =0; $ik < $hli->hotel->hotel_category; $ik++){ ?>
-														<img src="{!! asset('public/img/star.png') !!}" alt="Star Rating" title="Star Rating">
+														<img src="{!! asset('img/star.png') !!}" alt="Star Rating" title="Star Rating">
 													<?php } ?>
 													</div>
 													<div class="textblack13cont topmargin10px">

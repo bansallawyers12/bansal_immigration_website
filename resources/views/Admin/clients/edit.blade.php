@@ -2,7 +2,7 @@
 @section('title', 'Edit Client')
 
 @section('content')
-<link rel="stylesheet" href="{{URL::asset('public/css/bootstrap-datepicker.min.css')}}">
+<link rel="stylesheet" href="{{URL::asset('css/bootstrap-datepicker.min.css')}}">
 <!-- Main Content -->
 <div class="main-content">
 	<section class="section">
@@ -1069,7 +1069,7 @@ function initAutocomplete() {
 
 window.initAutocomplete = initAutocomplete;
 </script>
-<script src="{{URL::asset('public/js/bootstrap-datepicker.js')}}"></script>
+<script src="{{URL::asset('js/bootstrap-datepicker.js')}}"></script>
 <script>
 jQuery(document).ready(function($){
 
