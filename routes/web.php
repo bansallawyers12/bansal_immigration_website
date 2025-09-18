@@ -46,15 +46,12 @@ Route::post('/exception', 'ExceptionController@index')->name('exception');
 // Route::get('/searchtour', 'HomeController@Searchtour')->name('Searchtour');
 // Route::get('page/{slug}', 'HomeController@Page')->name('page.slug');
 
-// Route::get('/enquiry', 'HomeController@enquiry')->name('enquiry');
-// Route::post('/enquiry/store', 'HomeController@store')->name('enquiry.store');
 
 // // Route::get('invoice/secure/{slug}', 'InvoiceController@invoice')->name('invoice');
 // Route::get('/invoice/download/{id}', 'InvoiceController@customer_invoice_download')->name('invoice.customer_invoice_download');
 // Route::get('/invoice/print/{id}', 'InvoiceController@customer_invoice_print')->name('invoice.customer_invoice_print');
 // //singlepackage
 // Route::get('/singlepackage', 'HomeController@singlepack')->name('singlepackage');
-// Route::get('/packdetails', 'HomeController@packdetails')->name('packdetails');
 // Route::get('/profile', 'HomeController@myprofile')->name('profile');
 //Login and Register
 Auth::routes();
@@ -70,32 +67,6 @@ Route::post('/forgot_password', 'HomeController@forgotPassword')->name('forgot_p
 Route::get('/reset_link/{token}', 'HomeController@resetLink')->name('reset_link');
 Route::post('/reset_link', 'HomeController@resetLink')->name('reset_link');	 */
 
-//Review Panel
-// Route::post('/add_review', 'DashboardController@addReview')->name('dashboard.add_review');
-
-//Shipping Info
-// Route::get('/address', 'DashboardController@address')->name('dashboard.address');
-// Route::post('/address', 'DashboardController@address')->name('dashboard.address');
-
-//Payment Process
-//Route::get('/payment', 'PaymentController@index')->name('payment.index');
-//Route::post('/checkout', 'PaymentController@checkout')->name('payment.checkout');
-//Route::get('/payment_status', 'PaymentController@status')->name('payment.status');
-
-//Thankyou Page
-// Route::get('/thankyou', 'PaymentController@thankyou')->name('payment.thankyou');
-
-// //Inner Dashboard
-// Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
-// Route::get('dashboard/view_order_summary/{id}', 'DashboardController@viewOrderSummary')->name('dashboard.view_order_summary');
-// Route::get('/view_test_series_order/{id}', 'DashboardController@viewTestSeriesOrder')->name('dashboard.view_test_series_order');
-// Route::post('/logout', 'DashboardController@logout')->name('logout');
-
-// //Other Functions
-// Route::get('/change_password', 'DashboardController@changePassword')->name('change_password');
-// Route::post('/change_password', 'DashboardController@changePassword')->name('change_password');
-// Route::get('/edit_profile', 'DashboardController@editProfile')->name('dashboard.edit_profile');
-// Route::post('/edit_profile', 'DashboardController@editProfile')->name('dashboard.edit_profile');
 
 // Frontend Route
 //Home Page
@@ -134,8 +105,6 @@ Route::post('/getdisableddatetime', 'HomeController@getdisableddatetime');
 
 //Route::get('/mission-vision', 'HomeController@missionvision')->name('mission_vision');
 Route::get('page/{slug}', 'HomeController@Page')->name('page.slug');
-Route::post('enquiry-contact', 'PackageController@enquiryContact')->name('query.contact');
-Route::get('thanks', 'PackageController@thanks')->name('thanks');
 Route::get('/profile', 'HomeController@myprofile')->name('profile');
 /*---------------Agent Route-------------------*/
 // Agent routes removed
